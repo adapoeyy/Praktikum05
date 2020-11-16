@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <style>
+        select, img {
+            width: 250px;
+            height: auto;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Picker</title>
+</head>
+
+<body>
+<h2>Pilihlah Motor Idaman Anda</h2>
+    <select id="changeImage" onchange="change_image()">
+        <option disabled selected>Pilihlah Motor Idaman Anda</option>
+        <option value="bmwgs" >BMW GS</option>
+        <option value="ducativ4">Ducati V4</option>
+        <option value="hdiron883">Harley Davidson Iron 883</option>
+        <option value="hondaforza">Honda Forza</option>
+        <option value="rubyv250">Kaisar Ruby V250</option>
+        <option value="zx6r">Kawasaki ZX6R</option>
+        <option value="ktmduke">KTM Duke</option>
+        <option value="r6">Yamaha R6</option>
+        <option value="suzukim90">Suzuki M90</option>
+    </select>
+    <br/>
+    <br/>
+    <img id="gambar" src="" alt="Pilih Motor diatas untuk menampilkan gambar!" width="100px" height="auto">
+    <script>
+        function change_image() {
+            let images = document.getElementById("changeImage").value;
+            let gambar = document.getElementById("gambar");
+            if (images == "bmwgs"){
+                gambar.src="./Image/bmwgs.jpg";
+                alert(`Ini adalah BMW GS ${images}`);
+            }else if (images == "ducativ4"){
+                gambar.src="./Image/ducativ4.jpg";
+                alert(`Ini adalah Ducati V4 ${images}`);
+            }else if (images == "hdiron883"){
+                gambar.src="./Image/hdiron883.jpg";
+                alert(`Ini adalah Harley Davidson Iron 883 ${images}`);
+            }else if (images == "hondaforza"){
+                gambar.src="./Image/hondaforza.jpg";
+                alert(`Ini adalah Honda Forza ${images}`);
+            }else if (images == "rubyv250"){
+                gambar.src="./Image/rubyv250.jpg";
+                alert(`Ini adalah Kaisar Ruby V250 ${images}`);
+            }else if (images == "zx6r"){
+                gambar.src="./Image/zx6r.jpg";
+                alert(`Ini adalah Kawasaki ZX6R ${images}`);
+            }else if (images == "ktmduke"){
+                gambar.src="./Image/ktmduke.jpg";
+                alert(`Ini adalah KTM Duke ${images}`);
+            }else if (images == "r6"){
+                gambar.src="./Image/r6.jpg";
+                alert(`Ini adalah Yamaha R6 ${images}`);
+            }else if (images == "suzukim90"){
+                gambar.src="./Image/suzukim90.jpg";
+                alert(`Ini adalah Suzuki M90 ${images}`);
+            }
+        }
+    </script>
+</body>
+
+</html>
